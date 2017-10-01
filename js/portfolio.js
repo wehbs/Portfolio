@@ -1,4 +1,4 @@
-$.getJSON("http://ip-api.com/json",
+$.getJSON("https://ipapi.co/json/",
   function (json) {
     var config = {
       apiKey: "AIzaSyDxW2ypEVCUqBXGf-gL7MXA0pUJjEiPxU0",
@@ -12,13 +12,13 @@ $.getJSON("http://ip-api.com/json",
     var database = firebase.database();
     var ipValues = {
       city: json.city,
-      country: json.country,
-      isp: json.isp,
-      lat: json.lat,
-      lon: json.lon,
-      ip: json.query,
-      state: json.regionName,
-      zip: json.zip,
+      country: json.country_name,
+      isp: json.org,
+      lat: json.latitude,
+      lon: json.longitude,
+      ip: json.ip,
+      state: json.region,
+      zip: json.postal,
     };
     database.ref().push(ipValues);
   });
