@@ -1,3 +1,28 @@
+$.getJSON("http://ip-api.com/json",
+  function (json) {
+    var config = {
+      apiKey: "AIzaSyDxW2ypEVCUqBXGf-gL7MXA0pUJjEiPxU0",
+      authDomain: "portfolio-5daeb.firebaseapp.com",
+      databaseURL: "https://portfolio-5daeb.firebaseio.com",
+      projectId: "portfolio-5daeb",
+      storageBucket: "portfolio-5daeb.appspot.com",
+      messagingSenderId: "667750983442"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var ipValues = {
+      city: json.city,
+      country: json.country,
+      isp: json.isp,
+      lat: json.lat,
+      lon: json.lon,
+      ip: json.query,
+      state: json.regionName,
+      zip: json.zip,
+    };
+    database.ref().push(ipValues);
+  });
+
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
   if ($(".navbar").offset().top > 50) {
