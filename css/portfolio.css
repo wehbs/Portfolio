@@ -26,15 +26,19 @@
 
         p {
           margin: 0 0 25px;
-          font-size: 18px;
-          line-height: 1.5;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.3);
+          font-family: 'Source Code Pro', monospace;
+          line-height: 1.38;
+          font-weight: 400;
+          letter-spacing: .011em;
         }
 
         @media (min-width: 768px) {
           p {
             margin: 0 0 35px;
-            font-size: 20px;
-            line-height: 1.6;
+            font-size: 21px;
+            line-height: 1.38;
           }
         }
 
@@ -160,6 +164,7 @@
 
         .intro .intro-body .intro-text {
           font-size: 18px;
+          color: white;
         }
 
         @media (min-width: 768px) {
@@ -172,6 +177,7 @@
           }
           .intro .intro-body .intro-text {
             font-size: 26px;
+            color: white;
           }
         }
 
@@ -213,12 +219,6 @@
           -moz-animation-iteration-count: infinite;
           -webkit-animation-timing-function: linear;
           -moz-animation-timing-function: linear;
-        }
-
-        .thumbnail {
-          padding: 0 0 0 0;
-          border: none;
-          border-radius: 0;
         }
 
         @-webkit-keyframes pulse {
@@ -342,3 +342,107 @@
         .portLink {
           color: white;
         }
+
+        .main-title {
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate3d(-50%,-50%,0);
+          transform: translate3d(-50%,-50%,0);
+        }
+        
+        #demo-canvas {
+          position: absolute;
+        }
+
+        .shell-wrap {
+          width: 300px;
+          margin: 100px auto 0 auto;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          position: fixed;
+          bottom: 0px;
+          z-index: 1;
+          opacity: .8;
+      }
+      
+      .shell-top-bar {
+          text-align: center;
+          color: #525252;
+          padding: 5px 0;
+          margin: 0;
+          text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+          font: 16px Arial, sans-serif;
+          font-size: 0.85em;
+          border: 1px solid #CCCCCC;
+          border-bottom: none;
+          -webkit-border-top-left-radius: 3px;
+          -webkit-border-top-right-radius: 3px;
+          -moz-border-radius-topleft: 3px;
+          -moz-border-radius-topright: 3px;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          background: #f7f7f7;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #f7f7f7 0%, #B8B8B8 100%);
+          /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #B8B8B8));
+          /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #f7f7f7 0%, #B8B8B8 100%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #f7f7f7 0%, #B8B8B8 100%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #f7f7f7 0%, #B8B8B8 100%);
+          /* IE10+ */
+          background: linear-gradient(to bottom, #f7f7f7 0%, #B8B8B8 100%);
+          /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#B8B8B8', GradientType=0);
+          /* IE6-9 */
+      }
+      
+      .shell-body {
+          margin: 0;
+          padding: 5px;
+          list-style: none;
+          background: #141414;
+          color: #45D40C;
+          font: 0.8em 'Andale Mono', Consolas, 'Courier New';
+          line-height: 1.6em;
+          -webkit-border-bottom-right-radius: 3px;
+          -webkit-border-bottom-left-radius: 3px;
+          -moz-border-radius-bottomright: 3px;
+          -moz-border-radius-bottomleft: 3px;
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+      }
+      
+      .shell-body li:before {
+          content: '$';
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+      
+      .shell-body li {
+          word-wrap: break-word;
+          position: relative;
+          padding: 0 0 0 15px;
+      }
+
+      .shell-box { 
+        background: transparent;
+        border: transparent;
+        outline: none;
+        width: 100%;
+      }
+
+      @media (max-width: 640px) 
+      {
+          .shell-wrap
+          {
+              display: none;
+          }
+      }

@@ -50,3 +50,47 @@ $(function () {
 $('.navbar-collapse ul li a').click(function () {
   $(".navbar-collapse").collapse('hide');
 });
+
+// Navigate the site through terminal commands
+function terminal(element) {
+  if (event.key === "Enter") {
+
+    var command = element.value;
+    $("<li>" + command + "</li>").insertBefore(".shell-box");
+    $(".shell-box").val("");
+
+    switch (command) {
+
+      case "help":
+        $("<li>clear: empty the bash window</li> <li>reload: reload the webpage</li> <li>cd about: scroll to about section</li> <li>cd portfolio: scroll to portfolio section</li> <li>cd contact: scroll to contact section</li>").insertBefore(".shell-box");
+        break;
+
+      case "clear":
+        $(".shell-body li").html("");
+        break;
+
+      case "reload":
+        location.reload();
+        break;
+
+      case "cd about":
+        $('html, body').stop().animate({
+          scrollTop: $("#about").offset().top
+        }, 1500, 'easeInOutExpo');
+        break;
+
+      case "cd portfolio":
+        $('html, body').stop().animate({
+          scrollTop: $("#portfolio").offset().top
+        }, 1500, 'easeInOutExpo');
+        break;
+
+      case "cd contact":
+        $('html, body').stop().animate({
+          scrollTop: $("#contact").offset().top
+        }, 1500, 'easeInOutExpo');
+        break;
+
+    }
+  }
+};

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108394743-1"></script>
   <script>
@@ -34,9 +35,11 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
   <!-- CSS -->
   <link href="css/portfolio.css" rel="stylesheet">
+  <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
 
 </head>
 
@@ -79,6 +82,10 @@
     <!-- /.container -->
   </nav>
 
+
+  <!-- <div id="large-header">
+    <canvas id="demo-canvas"></canvas> -->
+
   <!-- Intro Header -->
   <header class="intro">
     <div class="intro-body">
@@ -98,6 +105,11 @@
     </div>
   </header>
 
+
+  <!-- </div> -->
+
+
+
   <!-- About Section -->
   <section id="about" class="container content-section text-center">
     <div class="row">
@@ -116,15 +128,16 @@
           team of over 50 employees. I have also been actively engaged in shaping our Genius Bar training through planning
           and executing the on boarding experience with the participants and sharing feedback with our remote trainers.</p>
 
-        <p>Outside of work I am familiar with HTML5, CSS, javaScript, jQuery, Node.js, JSON, AJAX and Firebase. I have completed
-          over 100 hours on freecodecamp.org and am currently taking part in a 6 month Full Stack Web Development bootcamp
-          at The George Washington University through February. I feel that my skills with these technologies will apply
-          to multiple web development roles that are available in the market today. In my current role I am considered a
-          strong resource for technical guidance. As I become more knowledgeable in my Web Developer role I can be counted
-          on to help more junior employees as I am enthusiastic about helping people grow and develop. I am extremely passionate
-          about a company's culture and values and also love technology and learning. Given this opportunity to transition
-          into a new a career in web development will allow me to easily exceed the expectations of the role because this
-          to me is a dream which I would be lucky to do as a job. Thank you for taking the time to read this bio.</p>
+        <p>Outside of work I am familiar with HTML5, CSS, javaScript, jQuery, Node.js, Express.js, MySQL, JSON, AJAX, API's,
+          JSON, AJAX, Firebase and the command line. I have completed over 100 hours on freecodecamp.org and am currently
+          taking part in a 6 month Full Stack Web Development bootcamp at The George Washington University through February.
+          I feel that my skills with these technologies will apply to multiple web development roles that are available in
+          the market today. In my current role I am considered a strong resource for technical guidance. As I become more
+          knowledgeable in my Web Developer role I can be counted on to help more junior employees as I am enthusiastic about
+          helping people grow and develop. I am extremely passionate about a company's culture and values and also love technology
+          and learning. Given this opportunity to transition into a new a career in web development will allow me to easily
+          exceed the expectations of the role because this to me is a dream which I would be lucky to do as a job. Thank
+          you for taking the time to read this bio.</p>
       </div>
     </div>
   </section>
@@ -218,6 +231,22 @@
     </div>
   </section>
 
+
+  <!-- Shell window -->
+  <div class="shell-wrap">
+    <p class="shell-top-bar">Portfolio - Bash</p>
+    <ul class="shell-body">
+      <li>cd&nbsp;/Users/shamirwehbe/Portfolio/index.html</li>
+      <li>Hello there. Thanks for visiting my site.</li>
+      <li>You can navigate it using this terminal window.</li>
+      <li>Type "help" for a list of commands.</li>
+      <li>Hope you enjoy!</li>
+      <input type="text" class="shell-box" onkeydown="terminal(this)" id="test">
+    </ul>
+  </div>
+
+
+
   <!-- Footer -->
   <footer>
     <div class="container text-center">
@@ -231,15 +260,19 @@
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.4/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
   <!-- Theme JavaScript -->
   <script src="js/portfolio.js"></script>
+  <script src="js/rAF.js"></script>
+  <script src="js/demo-1.js"></script>
 
 </body>
 
