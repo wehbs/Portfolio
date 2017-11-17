@@ -55,7 +55,7 @@ $('.navbar-collapse ul li a').click(function () {
 function terminal(element) {
   if (event.key === "Enter") {
 
-    var command = element.value;
+    var command = element.value.toLowerCase();
     $("<li>" + command + "</li>").insertBefore(".shell-box");
     $(".shell-box").val("");
 
