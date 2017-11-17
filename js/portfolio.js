@@ -62,15 +62,13 @@ function terminal(element) {
     switch (command) {
 
       case "help":
-        $("<li>clear: empty the bash window</li> <li>reload: reload the webpage</li> <li>cd about: scroll to about section</li> <li>cd portfolio: scroll to portfolio section</li> <li>cd contact: scroll to contact section</li>").insertBefore(".shell-box");
+        $("<li>cd home: scroll to top of the page</li> <li>cd about: scroll to about section</li> <li>cd portfolio: scroll to portfolio section</li> <li>cd contact: scroll to contact section</li> <li>cd github: go to my github</li> <li>cd linkedin: go to my linkedin</li> <li>send email: send me an email</li> <li>reload: reload the webpage</li> <li>clear: empty the bash window</li>").insertBefore(".shell-box");
         break;
 
-      case "clear":
-        $(".shell-body li").html("");
-        break;
-
-      case "reload":
-        location.reload();
+      case "cd home":
+        $('html, body').stop().animate({
+          scrollTop: $("#page-top").offset().top
+        }, 1500, 'easeInOutExpo');
         break;
 
       case "cd about":
@@ -89,6 +87,26 @@ function terminal(element) {
         $('html, body').stop().animate({
           scrollTop: $("#contact").offset().top
         }, 1500, 'easeInOutExpo');
+        break;
+
+      case "cd github":
+        window.location = "https://github.com/wehbs";
+        break;
+
+      case "cd linkedin":
+        window.location = "https://www.linkedin.com/in/shamirwehbe";
+        break;
+
+      case "send email":
+        window.location = "mailto:shamirwehbe@me.com";
+        break;
+
+      case "reload":
+        location.reload();
+        break;
+
+      case "clear":
+        $(".shell-body li.pwd").nextAll("li").remove();
         break;
 
     }
