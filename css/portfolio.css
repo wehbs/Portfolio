@@ -341,6 +341,7 @@
 
         .portLink {
           color: white;
+          font-size: 16px;
         }
 
         .main-title {
@@ -446,3 +447,22 @@
               display: none;
           }
       }
+
+      .projectSumBox {
+        height: 70px;
+        width: 320px;
+        margin: 0 auto;
+      }
+
+      .projectSummary {
+        margin-top: 10px;
+        color: white;
+        font-size: 12px;
+        font-family: 'Source Code Pro', monospace; 
+        text-transform: none;    
+        margin-bottom: 2px;   
+      }
+
+      /* .technologies {
+        margin-top: 2px;
+      } */

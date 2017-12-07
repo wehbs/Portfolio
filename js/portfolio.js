@@ -62,7 +62,7 @@ function terminal(element) {
     switch (command) {
 
       case "help":
-        $("<li>cd home: scroll to top of the page</li> <li>cd about: scroll to about section</li> <li>cd portfolio: scroll to portfolio section</li> <li>cd contact: scroll to contact section</li> <li>cd github: go to my github</li> <li>cd linkedin: go to my linkedin</li> <li>send email: send me an email</li> <li>reload: reload the webpage</li> <li>clear: empty the bash window</li>").insertBefore(".shell-box");
+        $("<li>cd home: scroll to top of the page</li> <li>cd about: scroll to about section</li> <li>cd portfolio: scroll to portfolio section</li> <li>cd contact: scroll to contact section</li> <li>cd github: go to my github</li> <li>cd linkedin: go to my linkedin</li> <li>send email: send me an email</li> <li>reload: reload the webpage</li> <li>clear: empty the bash window</li> <li>hide: hide the bash window</li>").insertBefore(".shell-box");
         break;
 
       case "cd home":
@@ -108,6 +108,10 @@ function terminal(element) {
       case "clear":
         $(".shell-body li.pwd").nextAll("li").remove();
         break;
+
+      case "hide":
+      $(".shell-wrap").remove();
+      break;
 
     }
   }
