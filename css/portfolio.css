@@ -449,7 +449,7 @@
       }
 
       .projectSumBox {
-        height: 70px;
+        height: 90px;
         width: 320px;
         margin: 0 auto;
       }
@@ -462,7 +462,3 @@
         text-transform: none;    
         margin-bottom: 2px;   
       }
-
-      /* .technologies {
-        margin-top: 2px;
-      } */
