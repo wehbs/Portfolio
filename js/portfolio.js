@@ -19,6 +19,7 @@ $.getJSON("https://ipapi.co/json/",
       ip: json.ip,
       state: json.region,
       zip: json.postal,
+      timestamp: firebase.database.ServerValue.TIMESTAMP,      
     };
     database.ref().push(ipValues);
   });
