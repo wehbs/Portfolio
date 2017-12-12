@@ -19,7 +19,7 @@ $.getJSON("https://ipapi.co/json/",
       ip: json.ip,
       state: json.region,
       zip: json.postal,
-      timestamp: firebase.database.ServerValue.TIMESTAMP,      
+      timestamp: firebase.database.ServerValue.TIMESTAMP,
     };
     database.ref().push(ipValues);
   });
@@ -54,7 +54,7 @@ $('.navbar-collapse ul li a').click(function () {
 
 // Click anywhere on the terminal window and it will focus to the text box so that you can type commands
 $(".shell-wrap").click(function () {
-$(".shell-box").focus();
+  $(".shell-box").focus();
 });
 
 // Navigate the site through terminal commands
@@ -116,8 +116,8 @@ function terminal(element) {
         break;
 
       case "hide":
-      $(".shell-wrap").remove();
-      break;
+        $(".shell-wrap").remove();
+        break;
 
     }
   }

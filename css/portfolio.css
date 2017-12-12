@@ -349,10 +349,10 @@
           text-align: center;
           top: 50%;
           left: 50%;
-          -webkit-transform: translate3d(-50%,-50%,0);
-          transform: translate3d(-50%,-50%,0);
+          -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
         }
-        
+
         #demo-canvas {
           position: absolute;
         }
@@ -368,9 +368,9 @@
           bottom: 0px;
           z-index: 1;
           opacity: .8;
-      }
-      
-      .shell-top-bar {
+        }
+
+        .shell-top-bar {
           text-align: center;
           color: #525252;
           padding: 5px 0;
@@ -402,9 +402,9 @@
           /* W3C */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#B8B8B8', GradientType=0);
           /* IE6-9 */
-      }
-      
-      .shell-body {
+        }
+
+        .shell-body {
           margin: 0;
           padding: 5px;
           list-style: none;
@@ -418,47 +418,45 @@
           -moz-border-radius-bottomleft: 3px;
           border-bottom-right-radius: 3px;
           border-bottom-left-radius: 3px;
-      }
-      
-      .shell-body li:before {
+        }
+
+        .shell-body li:before {
           content: '$';
           position: absolute;
           left: 0;
           top: 0;
-      }
-      
-      .shell-body li {
+        }
+
+        .shell-body li {
           word-wrap: break-word;
           position: relative;
           padding: 0 0 0 15px;
-      }
+        }
 
-      .shell-box { 
-        background: transparent;
-        border: transparent;
-        outline: none;
-        width: 100%;
-      }
+        .shell-box {
+          background: transparent;
+          border: transparent;
+          outline: none;
+          width: 100%;
+        }
 
-      @media (max-width: 640px) 
-      {
-          .shell-wrap
-          {
-              display: none;
+        @media (max-width: 640px) {
+          .shell-wrap {
+            display: none;
           }
-      }
+        }
 
-      .projectSumBox {
-        /* height: 90px; */
-        /* width: 320px; */
-        margin: 0 auto;
-      }
+        .projectSumBox {
+          /* height: 90px; */
+          /* width: 320px; */
+          margin: 0 auto;
+        }
 
-      .projectSummary {
-        margin-top: 10px;
-        color: white;
-        font-size: 12px;
-        font-family: 'Source Code Pro', monospace; 
-        text-transform: none;    
-        margin-bottom: 2px;   
-      }
+        .projectSummary {
+          margin-top: 10px;
+          color: white;
+          font-size: 12px;
+          font-family: 'Source Code Pro', monospace;
+          text-transform: none;
+          margin-bottom: 2px;
+        }
