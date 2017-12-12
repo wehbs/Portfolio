@@ -460,3 +460,7 @@
           text-transform: none;
           margin-bottom: 2px;
         }
+
+        .img-rounded {
+          max-height: 400px;
+        }
