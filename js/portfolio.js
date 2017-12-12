@@ -52,6 +52,11 @@ $('.navbar-collapse ul li a').click(function () {
   $(".navbar-collapse").collapse('hide');
 });
 
+// Click anywhere on the terminal window and it will focus to the text box so that you can type commands
+$(".shell-wrap").click(function () {
+$(".shell-box").focus();
+});
+
 // Navigate the site through terminal commands
 function terminal(element) {
   if (event.key === "Enter") {
